@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="2dp"
-    app:cardBackgroundColor="#FFFFFF"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="1dp"
+    app:cardBackgroundColor="@color/colorSurface"
     app:strokeColor="@color/dividerColor"
     app:strokeWidth="1dp">
 
@@ -17,8 +18,8 @@
         android:gravity="center_vertical">
 
         <TextView
-            android:layout_width="44dp"
-            android:layout_height="44dp"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
             android:text="🏪"
             android:textSize="22sp"
             android:gravity="center"
@@ -29,14 +30,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_marginStart="12dp">
+            android:layout_marginStart="14dp">
 
             <TextView
                 android:id="@+id/tvShopName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Shop Name"
-                android:textSize="16sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorTextPrimary" />
 
@@ -45,7 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Shop Address"
-                android:textSize="13sp"
+                android:textSize="12sp"
                 android:textColor="@color/colorTextSecondary"
                 android:layout_marginTop="2dp" />
 
@@ -66,7 +67,7 @@
             android:text="Shop ›"
             android:textColor="@color/colorPrimary"
             android:textStyle="bold"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:layout_marginStart="6dp" />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

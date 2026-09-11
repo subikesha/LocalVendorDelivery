@@ -11,16 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="24dp"
+        android:padding="20dp"
         android:gravity="center"
+        android:background="@color/colorBackground"
         android:visibility="visible">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="20dp"
-            app:cardElevation="4dp"
-            app:cardBackgroundColor="#FFFFFF"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/colorSurface"
             app:strokeColor="@color/dividerColor"
             app:strokeWidth="1dp">
 
@@ -30,30 +31,64 @@
                 android:orientation="vertical"
                 android:padding="24dp">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:text="🛡️"
+                        android:textSize="22sp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_chip_purple" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="System Admin"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Root Control &amp; Dispatch"
+                            android:textSize="11sp"
+                            android:textColor="#7C3AED"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="🔒 Admin Login Required"
-                    android:textSize="22sp"
+                    android:text="Authorized security clearance required to manage marketplace ecosystem"
+                    android:textSize="13sp"
+                    android:textColor="@color/colorTextSecondary"
+                    android:layout_marginBottom="20dp"
+                    android:lineSpacingExtra="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ADMIN USERNAME"
+                    android:textSize="11sp"
                     android:textStyle="bold"
-                    android:textColor="@color/colorPrimary"
-                    android:layout_marginBottom="4dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Only authorized system administrators can manage vendors and drivers"
-                    android:textSize="13sp"
+                    android:letterSpacing="0.05"
                     android:textColor="@color/colorTextSecondary"
-                    android:layout_marginBottom="20dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Admin Username"
-                    android:textSize="13sp"
-                    android:textColor="@color/colorTextSecondary"
-                    android:layout_marginBottom="4dp" />
+                    android:layout_marginBottom="6dp" />
 
                 <EditText
                     android:id="@+id/etAdminUsername"
@@ -62,33 +97,41 @@
                     android:hint="Username (e.g. admin)"
                     android:background="@drawable/bg_edit_text"
                     android:inputType="text"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="14sp"
                     android:layout_marginBottom="14dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Admin Password"
-                    android:textSize="13sp"
+                    android:text="PASSWORD"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
                     android:textColor="@color/colorTextSecondary"
-                    android:layout_marginBottom="4dp" />
+                    android:layout_marginBottom="6dp" />
 
                 <EditText
                     android:id="@+id/etAdminPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Password (e.g. admin)"
+                    android:hint="Enter password"
                     android:background="@drawable/bg_edit_text"
                     android:inputType="textPassword"
-                    android:layout_marginBottom="20dp" />
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="22dp" />
 
                 <Button
                     android:id="@+id/btnAdminLogin"
                     android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:text="Login as Admin"
+                    android:layout_height="50dp"
+                    android:text="Authenticate as Admin"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    app:cornerRadius="10dp" />
+                    android:backgroundTint="#7C3AED"
+                    app:cornerRadius="12dp"
+                    app:elevation="0dp" />
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -107,8 +150,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@color/colorPrimary"
-            android:padding="16dp"
+            android:background="@drawable/bg_header_gradient"
+            android:paddingStart="18dp"
+            android:paddingTop="18dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="16dp"
             android:gravity="center_vertical">
 
             <ImageButton
@@ -125,28 +171,29 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:layout_marginStart="12dp">
+                android:layout_marginStart="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Admin Control Panel"
                     android:textColor="#FFFFFF"
-                    android:textSize="19sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Centralized Vendor, Driver &amp; Catalog Management"
-                    android:textColor="#E3F2FD"
-                    android:textSize="11sp" />
+                    android:text="Vendors, Drivers &amp; Catalog Management"
+                    android:textColor="#DBEAFE"
+                    android:textSize="12sp"
+                    android:layout_marginTop="2dp" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/btnAdminLogout"
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
+                android:layout_height="38dp"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:textColor="#FFFFFF"
                 android:text="Logout"
@@ -162,7 +209,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:paddingStart="18dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="18dp"
+                android:paddingBottom="16dp">
 
                 <!-- Stats Overview Card -->
                 <com.google.android.material.card.MaterialCardView
@@ -170,8 +220,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     app:cardCornerRadius="16dp"
-                    app:cardElevation="3dp"
-                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/colorSurface"
                     app:strokeColor="@color/dividerColor"
                     app:strokeWidth="1dp">
 
@@ -184,7 +234,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Platform Summary"
+                            android:text="Platform Metrics"
                             android:textSize="15sp"
                             android:textStyle="bold"
                             android:textColor="@color/colorTextPrimary"
@@ -202,7 +252,7 @@
                                 android:orientation="vertical"
                                 android:gravity="center"
                                 android:background="@drawable/bg_chip_blue"
-                                android:padding="10dp"
+                                android:padding="12dp"
                                 android:layout_marginEnd="6dp">
 
                                 <TextView
@@ -210,7 +260,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="0"
-                                    android:textSize="20sp"
+                                    android:textSize="22sp"
                                     android:textStyle="bold"
                                     android:textColor="@color/colorPrimary" />
 
@@ -219,6 +269,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="Shops"
                                     android:textSize="11sp"
+                                    android:textStyle="bold"
                                     android:textColor="@color/colorTextSecondary" />
                             </LinearLayout>
 
@@ -229,7 +280,7 @@
                                 android:orientation="vertical"
                                 android:gravity="center"
                                 android:background="@drawable/bg_chip_orange"
-                                android:padding="10dp"
+                                android:padding="12dp"
                                 android:layout_marginEnd="6dp">
 
                                 <TextView
@@ -237,15 +288,16 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="0"
-                                    android:textSize="20sp"
+                                    android:textSize="22sp"
                                     android:textStyle="bold"
-                                    android:textColor="@color/colorWarning" />
+                                    android:textColor="@color/colorAccent" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Products"
                                     android:textSize="11sp"
+                                    android:textStyle="bold"
                                     android:textColor="@color/colorTextSecondary" />
                             </LinearLayout>
 
@@ -256,14 +308,14 @@
                                 android:orientation="vertical"
                                 android:gravity="center"
                                 android:background="@drawable/bg_chip_green"
-                                android:padding="10dp">
+                                android:padding="12dp">
 
                                 <TextView
                                     android:id="@+id/tvAdminStatOrders"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="0"
-                                    android:textSize="20sp"
+                                    android:textSize="22sp"
                                     android:textStyle="bold"
                                     android:textColor="@color/colorSuccess" />
 
@@ -272,6 +324,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="Orders"
                                     android:textSize="11sp"
+                                    android:textStyle="bold"
                                     android:textColor="@color/colorTextSecondary" />
                             </LinearLayout>
                         </LinearLayout>
@@ -281,7 +334,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Admin Management Modules"
+                    android:text="Management Modules"
                     android:textSize="15sp"
                     android:textStyle="bold"
                     android:textColor="@color/colorTextPrimary"
@@ -293,9 +346,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
-                    app:cardCornerRadius="14dp"
+                    app:cardCornerRadius="16dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardBackgroundColor="@color/colorSurface"
                     app:strokeColor="@color/dividerColor"
                     app:strokeWidth="1dp">
 
@@ -303,7 +356,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:padding="14dp"
+                        android:padding="16dp"
                         android:gravity="center_vertical">
 
                         <TextView
@@ -319,7 +372,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:orientation="vertical"
-                            android:layout_marginStart="12dp">
+                            android:layout_marginStart="14dp">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -334,7 +387,8 @@
                                 android:layout_height="wrap_content"
                                 android:text="Create vendor shop login, category, address &amp; GPS"
                                 android:textSize="12sp"
-                                android:textColor="@color/colorTextSecondary" />
+                                android:textColor="@color/colorTextSecondary"
+                                android:layout_marginTop="2dp" />
                         </LinearLayout>
 
                         <TextView
@@ -353,9 +407,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
-                    app:cardCornerRadius="14dp"
+                    app:cardCornerRadius="16dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardBackgroundColor="@color/colorSurface"
                     app:strokeColor="@color/dividerColor"
                     app:strokeWidth="1dp">
 
@@ -363,7 +417,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:padding="14dp"
+                        android:padding="16dp"
                         android:gravity="center_vertical">
 
                         <TextView
@@ -379,7 +433,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:orientation="vertical"
-                            android:layout_marginStart="12dp">
+                            android:layout_marginStart="14dp">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -394,7 +448,8 @@
                                 android:layout_height="wrap_content"
                                 android:text="Create delivery driver accounts and login credentials"
                                 android:textSize="12sp"
-                                android:textColor="@color/colorTextSecondary" />
+                                android:textColor="@color/colorTextSecondary"
+                                android:layout_marginTop="2dp" />
                         </LinearLayout>
 
                         <TextView
@@ -413,9 +468,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
-                    app:cardCornerRadius="14dp"
+                    app:cardCornerRadius="16dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardBackgroundColor="@color/colorSurface"
                     app:strokeColor="@color/dividerColor"
                     app:strokeWidth="1dp">
 
@@ -423,7 +478,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:padding="14dp"
+                        android:padding="16dp"
                         android:gravity="center_vertical">
 
                         <TextView
@@ -439,7 +494,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:orientation="vertical"
-                            android:layout_marginStart="12dp">
+                            android:layout_marginStart="14dp">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -454,14 +509,15 @@
                                 android:layout_height="wrap_content"
                                 android:text="Add product photos, pricing &amp; stock quantity"
                                 android:textSize="12sp"
-                                android:textColor="@color/colorTextSecondary" />
+                                android:textColor="@color/colorTextSecondary"
+                                android:layout_marginTop="2dp" />
                         </LinearLayout>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Open ›"
-                            android:textColor="@color/colorWarning"
+                            android:textColor="@color/colorAccent"
                             android:textStyle="bold"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -473,9 +529,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    app:cardCornerRadius="14dp"
+                    app:cardCornerRadius="16dp"
                     app:cardElevation="2dp"
-                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardBackgroundColor="@color/colorSurface"
                     app:strokeColor="@color/dividerColor"
                     app:strokeWidth="1dp">
 
@@ -483,7 +539,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:padding="14dp"
+                        android:padding="16dp"
                         android:gravity="center_vertical">
 
                         <TextView
@@ -492,14 +548,14 @@
                             android:text="📊"
                             android:textSize="22sp"
                             android:gravity="center"
-                            android:background="@drawable/bg_chip_blue" />
+                            android:background="@drawable/bg_chip_purple" />
 
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:orientation="vertical"
-                            android:layout_marginStart="12dp">
+                            android:layout_marginStart="14dp">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -514,14 +570,15 @@
                                 android:layout_height="wrap_content"
                                 android:text="Full catalog, active orders, and driver ratings"
                                 android:textSize="12sp"
-                                android:textColor="@color/colorTextSecondary" />
+                                android:textColor="@color/colorTextSecondary"
+                                android:layout_marginTop="2dp" />
                         </LinearLayout>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Open ›"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="#7C3AED"
                             android:textStyle="bold"
                             android:textSize="14sp" />
                     </LinearLayout>

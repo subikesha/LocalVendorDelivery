@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="2dp"
-    app:cardBackgroundColor="#FFFFFF"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="1dp"
+    app:cardBackgroundColor="@color/colorSurface"
     app:strokeColor="@color/dividerColor"
     app:strokeWidth="1dp">
 
@@ -13,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="14dp">
+        android:padding="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,10 +37,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ASSIGNED"
-                android:textSize="11sp"
+                android:textSize="10sp"
                 android:textStyle="bold"
+                android:letterSpacing="0.05"
                 android:textColor="@color/colorPrimary"
-                android:background="@drawable/bg_chip_blue" />
+                android:background="@drawable/bg_chip_blue"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp" />
         </LinearLayout>
 
         <TextView
@@ -49,13 +55,19 @@
             android:text="Items: Margherita Pizza (x1)"
             android:textSize="13sp"
             android:textColor="@color/colorTextSecondary"
-            android:layout_marginTop="6dp" />
+            android:layout_marginTop="8dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerColor"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="8dp"
             android:gravity="center_vertical">
 
             <TextView
@@ -72,7 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Start Delivery ›"
-                android:textSize="12sp"
+                android:textSize="13sp"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold" />
         </LinearLayout>

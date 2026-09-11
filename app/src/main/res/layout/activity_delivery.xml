@@ -5,22 +5,23 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground">
 
-    <!-- Container 1: Delivery Driver Login (No self-registration) -->
+    <!-- Container 1: Delivery Driver Login -->
     <LinearLayout
         android:id="@+id/layoutAuthDelivery"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="24dp"
+        android:padding="20dp"
         android:gravity="center"
+        android:background="@color/colorBackground"
         android:visibility="visible">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="20dp"
-            app:cardElevation="4dp"
-            app:cardBackgroundColor="#FFFFFF"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/colorSurface"
             app:strokeColor="@color/dividerColor"
             app:strokeWidth="1dp">
 
@@ -30,73 +31,115 @@
                 android:orientation="vertical"
                 android:padding="24dp">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:text="🛵"
+                        android:textSize="22sp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_chip_green" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Delivery Partner"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rider Fleet Operations"
+                            android:textSize="11sp"
+                            android:textColor="@color/colorSuccess"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="🛵 Delivery Partner Portal"
-                    android:textSize="22sp"
+                    android:text="Login with credentials assigned by Dispatch Administrator"
+                    android:textSize="13sp"
+                    android:textColor="@color/colorTextSecondary"
+                    android:layout_marginBottom="20dp"
+                    android:lineSpacingExtra="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DRIVER USERNAME"
+                    android:textSize="11sp"
                     android:textStyle="bold"
-                    android:textColor="@color/colorPrimary"
-                    android:layout_marginBottom="4dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Login with driver credentials created by Administrator"
-                    android:textSize="13sp"
+                    android:letterSpacing="0.05"
                     android:textColor="@color/colorTextSecondary"
-                    android:layout_marginBottom="20dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Driver Username"
-                    android:textSize="13sp"
-                    android:textColor="@color/colorTextSecondary"
-                    android:layout_marginBottom="4dp" />
+                    android:layout_marginBottom="6dp" />
 
                 <EditText
                     android:id="@+id/etDelivUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Username (e.g. delivery_boy_1)"
+                    android:hint="e.g. delivery_boy_1"
                     android:background="@drawable/bg_edit_text"
                     android:inputType="text"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="14sp"
                     android:layout_marginBottom="14dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Password"
-                    android:textSize="13sp"
+                    android:text="PASSWORD"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
                     android:textColor="@color/colorTextSecondary"
-                    android:layout_marginBottom="4dp" />
+                    android:layout_marginBottom="6dp" />
 
                 <EditText
                     android:id="@+id/etDelivPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter password"
+                    android:hint="Enter your password"
                     android:background="@drawable/bg_edit_text"
                     android:inputType="textPassword"
-                    android:layout_marginBottom="20dp" />
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="22dp" />
 
                 <Button
                     android:id="@+id/btnDelivLogin"
                     android:layout_width="match_parent"
-                    android:layout_height="52dp"
+                    android:layout_height="50dp"
                     android:text="Login to Driver Dashboard"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    app:cornerRadius="10dp" />
+                    android:backgroundTint="@color/colorSuccess"
+                    app:cornerRadius="12dp"
+                    app:elevation="0dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ℹ️ Driver accounts can only be created by the System Admin"
-                    android:textSize="11sp"
+                    android:text="ℹ️ Driver partner onboarding is managed by the System Admin"
+                    android:textSize="12sp"
                     android:textColor="@color/colorTextSecondary"
-                    android:layout_marginTop="14dp"
+                    android:layout_marginTop="16dp"
                     android:layout_gravity="center" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -114,8 +157,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:padding="16dp"
+            android:background="@drawable/bg_header_gradient"
+            android:paddingStart="18dp"
+            android:paddingTop="18dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="16dp"
             android:orientation="horizontal"
             android:gravity="center_vertical">
 
@@ -137,15 +183,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="📍 Live GPS Tracking &amp; Cloud Sync Active"
-                    android:textColor="#E3F2FD"
-                    android:textSize="11sp" />
+                    android:text="📍 Live GPS &amp; Cloud Telemetry Active"
+                    android:textColor="#DBEAFE"
+                    android:textSize="12sp"
+                    android:layout_marginTop="2dp" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/btnDelivLogout"
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
+                android:layout_height="38dp"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:textColor="#FFFFFF"
                 android:text="Logout"
@@ -158,7 +205,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="16dp"
+            android:paddingStart="18dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="12dp"
             android:visibility="visible">
 
             <LinearLayout
@@ -166,14 +216,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginBottom="12dp">
+                android:layout_marginBottom="14dp">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="🛵 Assigned Delivery Tasks"
-                    android:textSize="17sp"
+                    android:text="Assigned Deliveries"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="@color/colorTextPrimary" />
 
@@ -190,19 +240,22 @@
             <Button
                 android:id="@+id/btnViewDriverFeedback"
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
+                android:layout_height="48dp"
                 android:text="⭐ View Customer Ratings &amp; Reviews"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:textColor="@color/colorWarning"
+                android:textColor="@color/colorAccent"
+                app:strokeColor="@color/colorAccent"
                 android:textStyle="bold"
-                android:layout_marginBottom="10dp" />
+                android:textSize="13sp"
+                app:cornerRadius="12dp"
+                android:layout_marginBottom="12dp" />
 
             <ListView
                 android:id="@+id/lvDelivOrders"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:divider="@null"
-                android:dividerHeight="10dp" />
+                android:dividerHeight="12dp" />
         </LinearLayout>
 
         <!-- Sub-panel B: Live Navigation & Simulation -->
@@ -211,7 +264,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="16dp"
+            android:paddingStart="18dp"
+            android:paddingTop="14dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="12dp"
             android:visibility="gone">
 
             <LinearLayout
@@ -219,12 +275,12 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="12dp">
 
                 <ImageButton
                     android:id="@+id/btnBackToDelivList"
-                    android:layout_width="38dp"
-                    android:layout_height="38dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@android:drawable/ic_menu_revert"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:contentDescription="Back" />
@@ -233,8 +289,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="📍 Live Delivery Navigation"
-                    android:textSize="17sp"
+                    android:text="Live Route Navigation"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="@color/colorTextPrimary"
                     android:layout_marginStart="8dp" />
@@ -245,7 +301,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="4dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/colorSurface"
                 app:strokeColor="@color/dividerColor"
                 app:strokeWidth="1dp">
 
@@ -259,7 +316,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="12dp">
 
                 <!-- Simulate GPS Movement button -->
                 <Button
@@ -267,10 +324,11 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="50dp"
-                    android:text="▶️ Simulate GPS Move"
+                    android:text="▶️ Step GPS Move"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:textSize="13sp"
                     android:textStyle="bold"
+                    app:cornerRadius="12dp"
                     android:layout_marginEnd="6dp" />
 
                 <!-- Mark Delivered button -->
@@ -279,9 +337,12 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="50dp"
-                    android:text="✅ Mark Delivered"
+                    android:text="✓ Mark Delivered"
                     android:textSize="13sp"
                     android:textStyle="bold"
+                    android:backgroundTint="@color/colorSuccess"
+                    app:cornerRadius="12dp"
+                    app:elevation="0dp"
                     android:layout_marginStart="6dp" />
             </LinearLayout>
         </LinearLayout>

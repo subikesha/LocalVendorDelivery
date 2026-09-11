@@ -1,19 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <!-- Base System Colors -->
+    <color name="black">#FF0F172A</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="colorPrimary">#1E88E5</color>
-    <color name="colorPrimaryDark">#1565C0</color>
-    <color name="colorAccent">#FF9800</color>
-    <color name="colorBackground">#F4F6F9</color>
+    
+    <!-- Modern Brand & Primary Palette -->
+    <color name="colorPrimary">#2563EB</color>
+    <color name="colorPrimaryDark">#1D4ED8</color>
+    <color name="colorPrimaryLight">#DBEAFE</color>
+    <color name="colorAccent">#F97316</color>
+    <color name="colorAccentLight">#FFEDD5</color>
+    
+    <!-- Backgrounds & Surfaces -->
+    <color name="colorBackground">#F8FAFC</color>
+    <color name="colorSurface">#FFFFFF</color>
     <color name="colorCardBg">#FFFFFF</color>
-    <color name="colorTextPrimary">#212121</color>
-    <color name="colorTextSecondary">#757575</color>
-    <color name="colorSuccess">#4CAF50</color>
-    <color name="colorWarning">#FF9800</color>
-    <color name="colorDanger">#E53935</color>
-    <color name="colorInfo">#00ACC1</color>
-    <color name="gray">#9E9E9E</color>
-    <color name="light_gray">#EEEEEE</color>
-    <color name="dividerColor">#E0E0E0</color>
+    
+    <!-- Typography & Hierarchy -->
+    <color name="colorTextPrimary">#0F172A</color>
+    <color name="colorTextSecondary">#64748B</color>
+    <color name="colorTextMuted">#94A3B8</color>
+    
+    <!-- Feedback & Semantic Status -->
+    <color name="colorSuccess">#10B981</color>
+    <color name="colorSuccessBg">#ECFDF5</color>
+    <color name="colorWarning">#F59E0B</color>
+    <color name="colorWarningBg">#FFFBEB</color>
+    <color name="colorDanger">#EF4444</color>
+    <color name="colorDangerBg">#FEF2F2</color>
+    <color name="colorInfo">#06B6D4</color>
+    <color name="colorInfoBg">#ECFEFF</color>
+    
+    <!-- Neutrals & Borders -->
+    <color name="gray">#94A3B8</color>
+    <color name="light_gray">#F1F5F9</color>
+    <color name="dividerColor">#E2E8F0</color>
 </resources>

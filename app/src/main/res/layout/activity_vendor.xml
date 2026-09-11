@@ -5,22 +5,23 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground">
 
-    <!-- Container 1: Vendor Login (No self-registration) -->
+    <!-- Container 1: Vendor Login -->
     <LinearLayout
         android:id="@+id/layoutAuthVendor"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="24dp"
+        android:padding="20dp"
         android:gravity="center"
+        android:background="@color/colorBackground"
         android:visibility="visible">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="20dp"
-            app:cardElevation="4dp"
-            app:cardBackgroundColor="#FFFFFF"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/colorSurface"
             app:strokeColor="@color/dividerColor"
             app:strokeWidth="1dp">
 
@@ -30,30 +31,64 @@
                 android:orientation="vertical"
                 android:padding="24dp">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:text="🏪"
+                        android:textSize="22sp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_chip_orange" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vendor Partner"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Merchant Operations"
+                            android:textSize="11sp"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="🏪 Vendor Partner Portal"
-                    android:textSize="22sp"
+                    android:text="Sign in to manage orders, catalog &amp; dispatch drivers"
+                    android:textSize="13sp"
+                    android:textColor="@color/colorTextSecondary"
+                    android:layout_marginBottom="20dp"
+                    android:lineSpacingExtra="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VENDOR USERNAME"
+                    android:textSize="11sp"
                     android:textStyle="bold"
-                    android:textColor="@color/colorPrimary"
-                    android:layout_marginBottom="4dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Login with credentials provided by Administrator"
-                    android:textSize="13sp"
+                    android:letterSpacing="0.05"
                     android:textColor="@color/colorTextSecondary"
-                    android:layout_marginBottom="20dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Vendor Username"
-                    android:textSize="13sp"
-                    android:textColor="@color/colorTextSecondary"
-                    android:layout_marginBottom="4dp" />
+                    android:layout_marginBottom="6dp" />
 
                 <EditText
                     android:id="@+id/etVendorUsername"
@@ -62,41 +97,49 @@
                     android:hint="Enter vendor username"
                     android:background="@drawable/bg_edit_text"
                     android:inputType="text"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="14sp"
                     android:layout_marginBottom="14dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Password"
-                    android:textSize="13sp"
+                    android:text="PASSWORD"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
                     android:textColor="@color/colorTextSecondary"
-                    android:layout_marginBottom="4dp" />
+                    android:layout_marginBottom="6dp" />
 
                 <EditText
                     android:id="@+id/etVendorPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter password"
+                    android:hint="Enter your password"
                     android:background="@drawable/bg_edit_text"
                     android:inputType="textPassword"
-                    android:layout_marginBottom="20dp" />
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="22dp" />
 
                 <Button
                     android:id="@+id/btnVendorLogin"
                     android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:text="Login to Vendor Dashboard"
+                    android:layout_height="50dp"
+                    android:text="Login to Merchant Portal"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    app:cornerRadius="10dp" />
+                    android:backgroundTint="@color/colorAccent"
+                    app:cornerRadius="12dp"
+                    app:elevation="0dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ℹ️ New shops can only be registered by the System Admin"
-                    android:textSize="11sp"
+                    android:text="ℹ️ Store registrations are managed by the System Administrator"
+                    android:textSize="12sp"
                     android:textColor="@color/colorTextSecondary"
-                    android:layout_marginTop="14dp"
+                    android:layout_marginTop="16dp"
                     android:layout_gravity="center" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -114,8 +157,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:padding="16dp"
+            android:background="@drawable/bg_header_gradient"
+            android:paddingStart="18dp"
+            android:paddingTop="18dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="16dp"
             android:orientation="horizontal"
             android:gravity="center_vertical">
 
@@ -138,14 +184,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="⚡ Real-time Order Stream Active"
-                    android:textColor="#E3F2FD"
-                    android:textSize="11sp" />
+                    android:textColor="#DBEAFE"
+                    android:textSize="12sp"
+                    android:layout_marginTop="2dp" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/btnVendorLogout"
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
+                android:layout_height="38dp"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:textColor="#FFFFFF"
                 android:text="Logout"
@@ -157,21 +204,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:paddingStart="18dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginBottom="12dp">
+                android:layout_marginBottom="14dp">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="📋 Incoming Orders &amp; Tasks"
-                    android:textSize="17sp"
+                    android:text="Incoming Orders"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="@color/colorTextPrimary" />
 
@@ -191,7 +241,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:divider="@null"
-                android:dividerHeight="10dp" />
+                android:dividerHeight="12dp" />
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>

@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="2dp"
-    app:cardBackgroundColor="#FFFFFF"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="1dp"
+    app:cardBackgroundColor="@color/colorSurface"
     app:strokeColor="@color/dividerColor"
     app:strokeWidth="1dp">
 
@@ -30,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_marginStart="12dp">
+            android:layout_marginStart="14dp">
 
             <TextView
                 android:id="@+id/tvProdName"
@@ -55,14 +56,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginTop="4dp">
+                android:layout_marginTop="6dp">
 
                 <TextView
                     android:id="@+id/tvProdPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="₹150.0"
-                    android:textSize="15sp"
+                    android:textSize="14sp"
                     android:textColor="@color/colorSuccess"
                     android:textStyle="bold" />
 
@@ -84,7 +85,9 @@
             android:text="+ Add"
             android:textSize="12sp"
             android:textStyle="bold"
-            app:cornerRadius="8dp"
+            android:backgroundTint="@color/colorPrimary"
+            app:cornerRadius="10dp"
+            app:elevation="0dp"
             android:layout_marginStart="8dp" />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

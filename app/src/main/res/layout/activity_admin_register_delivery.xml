@@ -11,8 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/colorPrimary"
-        android:padding="16dp"
+        android:background="@drawable/bg_header_gradient"
+        android:paddingStart="18dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="16dp"
         android:gravity="center_vertical">
 
         <ImageButton
@@ -24,14 +27,29 @@
             app:tint="#FFFFFF"
             android:contentDescription="Back" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Add Delivery Partner"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginStart="12dp" />
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Delivery Partner"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dispatch Fleet &amp; Driver Authentication"
+                android:textColor="#DBEAFE"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
     </LinearLayout>
 
     <ScrollView
@@ -43,14 +61,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:paddingStart="18dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="24dp">
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="3dp"
-                app:cardBackgroundColor="#FFFFFF"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/colorSurface"
                 app:strokeColor="@color/dividerColor"
                 app:strokeWidth="1dp">
 
@@ -60,22 +81,41 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="🛵 Delivery Partner Credentials"
-                        android:textSize="17sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_marginBottom="14dp" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:text="🛵"
+                            android:textSize="20sp"
+                            android:gravity="center"
+                            android:background="@drawable/bg_chip_green" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DRIVER CREDENTIALS"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.05"
+                            android:textColor="@color/colorSuccess"
+                            android:layout_marginStart="12dp" />
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Login Username"
-                        android:textSize="13sp"
+                        android:text="LOGIN USERNAME"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.05"
                         android:textColor="@color/colorTextSecondary"
-                        android:layout_marginBottom="4dp" />
+                        android:layout_marginBottom="6dp" />
 
                     <EditText
                         android:id="@+id/etDelivUsername"
@@ -84,32 +124,40 @@
                         android:hint="e.g. delivery_partner_3"
                         android:background="@drawable/bg_edit_text"
                         android:inputType="text"
-                        android:layout_marginBottom="12dp" />
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="14dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Login Password"
-                        android:textSize="13sp"
+                        android:text="LOGIN PASSWORD"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.05"
                         android:textColor="@color/colorTextSecondary"
-                        android:layout_marginBottom="4dp" />
+                        android:layout_marginBottom="6dp" />
 
                     <EditText
                         android:id="@+id/etDelivPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Enter password"
+                        android:hint="Enter driver password"
                         android:background="@drawable/bg_edit_text"
                         android:inputType="textPassword"
-                        android:layout_marginBottom="12dp" />
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="14dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Full Name"
-                        android:textSize="13sp"
+                        android:text="FULL NAME"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.05"
                         android:textColor="@color/colorTextSecondary"
-                        android:layout_marginBottom="4dp" />
+                        android:layout_marginBottom="6dp" />
 
                     <EditText
                         android:id="@+id/etDelivFullName"
@@ -118,15 +166,19 @@
                         android:hint="e.g. Michael Scott"
                         android:background="@drawable/bg_edit_text"
                         android:inputType="textPersonName"
-                        android:layout_marginBottom="12dp" />
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="14dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Phone Number"
-                        android:textSize="13sp"
+                        android:text="PHONE NUMBER"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.05"
                         android:textColor="@color/colorTextSecondary"
-                        android:layout_marginBottom="4dp" />
+                        android:layout_marginBottom="6dp" />
 
                     <EditText
                         android:id="@+id/etDelivPhone"
@@ -135,7 +187,9 @@
                         android:hint="e.g. 9876543210"
                         android:background="@drawable/bg_edit_text"
                         android:inputType="phone"
-                        android:layout_marginBottom="16dp" />
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="22dp" />
 
                     <Button
                         android:id="@+id/btnSubmitRegisterDelivery"
@@ -144,7 +198,9 @@
                         android:text="Create Delivery Partner Account"
                         android:textSize="15sp"
                         android:textStyle="bold"
-                        app:cornerRadius="10dp" />
+                        android:backgroundTint="@color/colorSuccess"
+                        app:cornerRadius="12dp"
+                        app:elevation="0dp" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>

@@ -11,8 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/colorPrimary"
-        android:padding="16dp"
+        android:background="@drawable/bg_header_gradient"
+        android:paddingStart="18dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="16dp"
         android:gravity="center_vertical">
 
         <ImageButton
@@ -24,14 +27,29 @@
             app:tint="#FFFFFF"
             android:contentDescription="Back" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="System Status &amp; Overview"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginStart="12dp" />
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="System Overview"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Live Ecosystem Status &amp; Logs"
+                android:textColor="#DBEAFE"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
     </LinearLayout>
 
     <ScrollView
@@ -43,16 +61,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:paddingStart="18dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="24dp">
 
             <!-- Card 1: Registered Shops & Locations -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="14dp"
+                app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
-                app:cardBackgroundColor="#FFFFFF"
+                app:cardBackgroundColor="@color/colorSurface"
                 app:strokeColor="@color/dividerColor"
                 app:strokeWidth="1dp">
 
@@ -62,14 +83,30 @@
                     android:orientation="vertical"
                     android:padding="16dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="🏪 Registered Vendor Shops"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_marginBottom="8dp" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:text="🏪"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:background="@drawable/bg_chip_blue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Registered Vendor Shops"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextPrimary"
+                            android:layout_marginStart="10dp" />
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/tvOverviewShops"
@@ -78,7 +115,7 @@
                         android:text="Loading shops..."
                         android:textColor="@color/colorTextPrimary"
                         android:textSize="13sp"
-                        android:lineSpacingExtra="3dp" />
+                        android:lineSpacingExtra="4dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -87,9 +124,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="14dp"
+                app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
-                app:cardBackgroundColor="#FFFFFF"
+                app:cardBackgroundColor="@color/colorSurface"
                 app:strokeColor="@color/dividerColor"
                 app:strokeWidth="1dp">
 
@@ -99,14 +136,30 @@
                     android:orientation="vertical"
                     android:padding="16dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="📦 Products Catalog"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorWarning"
-                        android:layout_marginBottom="8dp" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:text="📦"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:background="@drawable/bg_chip_orange" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Products Catalog"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextPrimary"
+                            android:layout_marginStart="10dp" />
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/tvOverviewProducts"
@@ -115,7 +168,7 @@
                         android:text="Loading products..."
                         android:textColor="@color/colorTextPrimary"
                         android:textSize="13sp"
-                        android:lineSpacingExtra="3dp" />
+                        android:lineSpacingExtra="4dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -124,9 +177,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="14dp"
+                app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
-                app:cardBackgroundColor="#FFFFFF"
+                app:cardBackgroundColor="@color/colorSurface"
                 app:strokeColor="@color/dividerColor"
                 app:strokeWidth="1dp">
 
@@ -136,14 +189,30 @@
                     android:orientation="vertical"
                     android:padding="16dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="🛵 Delivery Partners &amp; Orders"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorSuccess"
-                        android:layout_marginBottom="8dp" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:text="🛵"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:background="@drawable/bg_chip_green" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Delivery Partners &amp; Orders"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextPrimary"
+                            android:layout_marginStart="10dp" />
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/tvOverviewOrders"
@@ -152,7 +221,7 @@
                         android:text="Loading orders..."
                         android:textColor="@color/colorTextPrimary"
                         android:textSize="13sp"
-                        android:lineSpacingExtra="3dp" />
+                        android:lineSpacingExtra="4dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

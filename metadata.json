@@ -1,0 +1,6 @@
+{
+  "name": "Local Vendor Delivery",
+  "description": "Hyper-local delivery application connecting customers, vendors, delivery partners, and administrators with real-time order tracking and radar navigation.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
